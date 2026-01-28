@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chimie - Notiuni Educaționale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header cu navigare -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Notiuni Educaționale</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Acasă</a></li>
+                <li><a href="matematica.html" class="nav-link">Matematică</a></li>
+                <li><a href="fizica.html" class="nav-link">Fizică</a></li>
+                <li><a href="chimia.html" class="nav-link active">Chimie</a></li>
+                <li><a href="biologia.html" class="nav-link">Biologie</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section pentru Chimie -->
+    <section class="hero chimia-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Chimie</h1>
+            <p class="hero-subtitle">Descoperă structura materiei și reacțiile chimice</p>
+            <div class="hero-buttons">
+                <a href="#topics" class="btn btn-primary">Explorează Subiectele</a>
+                <a href="#reactions" class="btn btn-secondary">Reacții Chimice</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="chemistry-elements">
+                <div class="chemistry-element">⚗️</div>
+                <div class="chemistry-element">🧪</div>
+                <div class="chemistry-element">⚛️</div>
+                <div class="chemistry-element">🔬</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Subiecte Chimie -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2 class="section-title">Subiecte de Chimie</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Chimie Anorganică</h3>
+                    <p>Elemente chimice, compuși și reacții anorganice</p>
+                    <ul class="topic-list">
+                        <li>Tabelul periodic</li>
+                        <li>Legături chimice</li>
+                        <li>Acizi și baze</li>
+                        <li>Săruri și oxizi</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Chimie Organică</h3>
+                    <p>Compuși organici și reacții specifice</p>
+                    <ul class="topic-list">
+                        <li>Hidrocarburi</li>
+                        <li>Alcooli și eteri</li>
+                        <li>Acizi carboxilici</li>
+                        <li>Polimeri</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Biochimie</h3>
+                    <p>Chimia organismelor vii</p>
+                    <ul class="topic-list">
+                        <li>Proteine și aminoacizi</li>
+                        <li>Glucide și lipide</li>
+                        <li>Enzime și cataliză</li>
+                        <li>Metabolismul celular</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Chimie Fizică</h3>
+                    <p>Principii fizice în chimie</p>
+                    <ul class="topic-list">
+                        <li>Termodinamica chimică</li>
+                        <li>Cinetica chimică</li>
+                        <li>Echilibrul chimic</li>
+                        <li>Electrochimia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Tabelul Periodic -->
+    <section class="periodic-table-section">
+        <div class="container">
+            <h2 class="section-title">Tabelul Periodic Interactiv</h2>
+            <div class="periodic-table">
+                <div class="periodic-row">
+                    <div class="element" data-element="H">H</div>
+                    <div class="element" data-element="He">He</div>
+                </div>
+                <div class="periodic-row">
+                    <div class="element" data-element="Li">Li</div>
+                    <div class="element" data-element="Be">Be</div>
+                    <div class="element" data-element="B">B</div>
+                    <div class="element" data-element="C">C</div>
+                    <div class="element" data-element="N">N</div>
+                    <div class="element" data-element="O">O</div>
+                    <div class="element" data-element="F">F</div>
+                    <div class="element" data-element="Ne">Ne</div>
+                </div>
+                <div class="periodic-row">
+                    <div class="element" data-element="Na">Na</div>
+                    <div class="element" data-element="Mg">Mg</div>
+                    <div class="element" data-element="Al">Al</div>
+                    <div class="element" data-element="Si">Si</div>
+                    <div class="element" data-element="P">P</div>
+                    <div class="element" data-element="S">S</div>
+                    <div class="element" data-element="Cl">Cl</div>
+                    <div class="element" data-element="Ar">Ar</div>
+                </div>
+            </div>
+            <div class="element-info">
+                <h3>Informații despre Element</h3>
+                <div class="element-details">
+                    <p>Selectează un element din tabelul periodic pentru a vedea informațiile despre acesta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Reacții Chimice -->
+    <section id="reactions" class="reactions-section">
+        <div class="container">
+            <h2 class="section-title">Reacții Chimice Interactive</h2>
+            <div class="reactions-grid">
+                <div class="reaction-card">
+                    <h3>Reacția de Neutralizare</h3>
+                    <div class="reaction-equation">
+                        <span class="reactant">HCl</span> + <span class="reactant">NaOH</span> → <span class="product">NaCl</span> + <span class="product">H₂O</span>
+                    </div>
+                    <p>Reacția între un acid și o bază pentru a forma o sare și apă.</p>
+                    <button class="reaction-btn">Vezi Simularea</button>
+                </div>
+
+                <div class="reaction-card">
+                    <h3>Combustia</h3>
+                    <div class="reaction-equation">
+                        <span class="reactant">CH₄</span> + <span class="reactant">2O₂</span> → <span class="product">CO₂</span> + <span class="product">2H₂O</span>
+                    </div>
+                    <p>Reacția de ardere a metanului cu oxigenul.</p>
+                    <button class="reaction-btn">Vezi Simularea</button>
+                </div>
+
+                <div class="reaction-card">
+                    <h3>Dezvoltarea Hidrogenului</h3>
+                    <div class="reaction-equation">
+                        <span class="reactant">Zn</span> + <span class="reactant">2HCl</span> → <span class="product">ZnCl₂</span> + <span class="product">H₂</span>
+                    </div>
+                    <p>Reacția zincului cu acidul clorhidric.</p>
+                    <button class="reaction-btn">Vezi Simularea</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Laborator Virtual -->
+    <section class="virtual-lab-section">
+        <div class="container">
+            <h2 class="section-title">Laborator Virtual</h2>
+            <div class="lab-workspace">
+                <div class="lab-tools">
+                    <div class="tool" data-tool="beaker">🧪</div>
+                    <div class="tool" data-tool="flask">⚗️</div>
+                    <div class="tool" data-tool="bunsen">🔥</div>
+                    <div class="tool" data-tool="dropper">💧</div>
+                </div>
+                <div class="lab-bench">
+                    <div class="lab-area">
+                        <p>Glisează instrumentele aici pentru a începe experimentul</p>
+                    </div>
+                </div>
+                <div class="lab-chemicals">
+                    <div class="chemical" data-chemical="HCl">HCl</div>
+                    <div class="chemical" data-chemical="NaOH">NaOH</div>
+                    <div class="chemical" data-chemical="CuSO4">CuSO₄</div>
+                    <div class="chemical" data-chemical="H2O2">H₂O₂</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Formule Chimice -->
+    <section class="formulas-section">
+        <div class="container">
+            <h2 class="section-title">Formule Chimice Importante</h2>
+            <div class="formulas-grid">
+                <div class="formula-card">
+                    <h3>Concentrația Molară</h3>
+                    <div class="formula">c = n/V</div>
+                    <p>Concentrația molară este raportul dintre numărul de moli și volumul soluției.</p>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Legea Conservării Masei</h3>
+                    <div class="formula">m₁ + m₂ = m₃ + m₄</div>
+                    <p>Într-o reacție chimică, masa totală rămâne constantă.</p>
+                </div>
+
+                <div class="formula-card">
+                    <h3>pH-ul</h3>
+                    <div class="formula">pH = -log[H⁺]</div>
+                    <p>pH-ul măsoară aciditatea sau bazicitatea unei soluții.</p>
+                </div>
+
+                <div class="formula-card">
+                    <h3>Legea Gazelor Perfecte</h3>
+                    <div class="formula">PV = nRT</div>
+                    <p>Relația dintre presiune, volum, temperatură și numărul de moli.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Resurse Suplimentare -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Resurse Suplimentare</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Experimente</h3>
+                    <p>Urmărește experimente chimice în laborator cu explicații detaliate.</p>
+                    <a href="#" class="resource-link">Vezi Experimente</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Manual Digital</h3>
+                    <p>Accesează manualul digital cu toate conceptele de chimie.</p>
+                    <a href="#" class="resource-link">Accesează Manual</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Calculator Chimic</h3>
+                    <p>Calculează mase molare, concentrații și echilibre chimice.</p>
+                    <a href="#" class="resource-link">Accesează Calculator</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Notiuni Educaționale</h3>
+                    <p>Platforma ta pentru învățare modernă și interactivă.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Subiecte</h4>
+                    <ul>
+                        <li><a href="matematica.html">Matematică</a></li>
+                        <li><a href="fizica.html">Fizică</a></li>
+                        <li><a href="chimia.html">Chimie</a></li>
+                        <li><a href="biologia.html">Biologie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resurse</h4>
+                    <ul>
+                        <li><a href="#">Exerciții</a></li>
+                        <li><a href="#">Video-uri</a></li>
+                        <li><a href="#">Teste</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@notiuni.ro</li>
+                        <li><i class="fas fa-phone"></i> +40 123 456 789</li>
+                        <li><i class="fas fa-map-marker-alt"></i> București, România</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Notiuni Educaționale. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

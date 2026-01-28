@@ -1,0 +1,1574 @@
+/* Reset și variabile CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #667eea;
+    --secondary-color: #764ba2;
+    --accent-color: #f093fb;
+    --text-color: #2d3748;
+    --light-text: #718096;
+    --white: #ffffff;
+    --light-bg: #f7fafc;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header și Navigare */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-brand i {
+    font-size: 2rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--gradient-primary);
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    max-width: 600px;
+    margin-left: 5%;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    animation: slideInLeft 1s ease-out;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: slideInLeft 1s ease-out 0.2s both;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    animation: slideInLeft 1s ease-out 0.4s both;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.hero-visual {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.floating-elements {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.element {
+    position: absolute;
+    font-size: 4rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.element-1 {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.element-2 {
+    top: 60%;
+    left: 10%;
+    animation-delay: 1.5s;
+}
+
+.element-3 {
+    top: 30%;
+    right: 20%;
+    animation-delay: 3s;
+}
+
+.element-4 {
+    bottom: 20%;
+    right: 30%;
+    animation-delay: 4.5s;
+}
+
+/* Secțiunea Subiecte */
+.subjects-section {
+    padding: 100px 0;
+    background: var(--light-bg);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.subject-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.subject-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.subject-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.subject-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.subject-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.subject-card p {
+    color: var(--light-text);
+    margin-bottom: 1.5rem;
+}
+
+.card-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.card-link:hover {
+    gap: 1rem;
+}
+
+/* Secțiunea Despre */
+.about-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    transform: translateX(10px);
+    background: var(--gradient-primary);
+    color: var(--white);
+}
+
+.feature i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.feature:hover i {
+    color: var(--white);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.stat {
+    text-align: center;
+    padding: 2rem;
+    background: var(--gradient-secondary);
+    border-radius: var(--border-radius);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.stat:hover {
+    transform: scale(1.05);
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background: var(--text-color);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.footer-section p {
+    color: #a0aec0;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+    color: var(--white);
+}
+
+.footer-section ul li i {
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #4a5568;
+    color: #a0aec0;
+}
+
+/* Animații */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content {
+        margin: 0 5%;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-visual {
+        display: none;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+.loading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.loading.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.subject-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.stat:hover .stat-number {
+    animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Stiluri specifice pentru paginile individuale */
+
+/* Matematică */
+.math-elements {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.math-element {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.math-element:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.math-element:nth-child(2) { top: 60%; left: 10%; animation-delay: 1.5s; }
+.math-element:nth-child(3) { top: 30%; right: 20%; animation-delay: 3s; }
+.math-element:nth-child(4) { bottom: 20%; right: 30%; animation-delay: 4.5s; }
+
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.topic-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.topic-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.topic-card:hover::before {
+    transform: scaleX(1);
+}
+
+.topic-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.5rem;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.topic-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.topic-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.topic-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.formulas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.formula-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.formula-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.formula {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    font-family: 'Courier New', monospace;
+}
+
+.exercises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.exercise-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.exercise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.exercise-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.option-btn {
+    padding: 1rem;
+    border: 2px solid var(--light-text);
+    background: transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.option-btn:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.exercise-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--light-bg);
+}
+
+/* Fizică */
+.physics-elements {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.physics-element {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.physics-element:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.physics-element:nth-child(2) { top: 60%; left: 10%; animation-delay: 1.5s; }
+.physics-element:nth-child(3) { top: 30%; right: 20%; animation-delay: 3s; }
+.physics-element:nth-child(4) { bottom: 20%; right: 30%; animation-delay: 4.5s; }
+
+.experiments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.experiment-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.experiment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.experiment-visual {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+}
+
+.pendulum {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.pendulum-string {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background: #333;
+    transform-origin: top;
+}
+
+.pendulum-bob {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+.circuit {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.battery {
+    width: 30px;
+    height: 60px;
+    background: #ff6b6b;
+    border-radius: 5px;
+}
+
+.wire {
+    width: 60px;
+    height: 2px;
+    background: #333;
+}
+
+.bulb {
+    width: 30px;
+    height: 30px;
+    background: #ffd93d;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+.wave {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wave-line {
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.experiment-btn {
+    padding: 12px 24px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.experiment-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.simulations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.simulation-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.simulation-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.simulation-controls {
+    margin: 1.5rem 0;
+}
+
+.simulation-controls label {
+    display: block;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.simulation-slider {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.simulation-canvas {
+    height: 200px;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuit-builder {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+}
+
+.circuit-component {
+    padding: 1rem;
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 1.5rem;
+}
+
+.circuit-component:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.circuit-workspace {
+    height: 200px;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    position: relative;
+    border: 2px dashed var(--primary-color);
+}
+
+/* Chimie */
+.chemistry-elements {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.chemistry-element {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.chemistry-element:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.chemistry-element:nth-child(2) { top: 60%; left: 10%; animation-delay: 1.5s; }
+.chemistry-element:nth-child(3) { top: 30%; right: 20%; animation-delay: 3s; }
+.chemistry-element:nth-child(4) { bottom: 20%; right: 30%; animation-delay: 4.5s; }
+
+.periodic-table {
+    display: grid;
+    gap: 5px;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.periodic-row {
+    display: flex;
+    gap: 5px;
+}
+
+.element {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.element:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.element-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+}
+
+.element-details {
+    margin-top: 1rem;
+}
+
+.reactions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.reaction-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.reaction-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.reaction-equation {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    font-family: 'Courier New', monospace;
+}
+
+.reactant {
+    color: var(--primary-color);
+}
+
+.product {
+    color: var(--secondary-color);
+}
+
+.reaction-btn {
+    padding: 12px 24px;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.reaction-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.lab-workspace {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.lab-tools, .lab-chemicals {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tool, .chemical {
+    padding: 1rem;
+    background: var(--light-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    font-weight: 600;
+}
+
+.tool:hover, .chemical:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.lab-bench {
+    background: var(--light-bg);
+    border: 2px dashed var(--primary-color);
+    border-radius: var(--border-radius);
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lab-area {
+    text-align: center;
+    color: var(--light-text);
+}
+
+/* Biologie */
+.biology-elements {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+.biology-element {
+    position: absolute;
+    font-size: 3rem;
+    animation: float 6s ease-in-out infinite;
+}
+
+.biology-element:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+.biology-element:nth-child(2) { top: 60%; left: 10%; animation-delay: 1.5s; }
+.biology-element:nth-child(3) { top: 30%; right: 20%; animation-delay: 3s; }
+.biology-element:nth-child(4) { bottom: 20%; right: 30%; animation-delay: 4.5s; }
+
+.cell-model {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.cell-membrane {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.nucleus, .mitochondria, .endoplasmic-reticulum, .golgi-apparatus, .lysosome {
+    position: absolute;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 80px;
+}
+
+.nucleus { top: 20%; left: 20%; }
+.mitochondria { top: 60%; left: 10%; }
+.endoplasmic-reticulum { top: 30%; right: 20%; }
+.golgi-apparatus { bottom: 20%; right: 30%; }
+.lysosome { bottom: 40%; left: 40%; }
+
+.nucleus:hover, .mitochondria:hover, .endoplasmic-reticulum:hover, .golgi-apparatus:hover, .lysosome:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 1);
+}
+
+.organelle-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+}
+
+.organelle-details {
+    margin-top: 1rem;
+}
+
+.ecosystems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.ecosystem-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.ecosystem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.ecosystem-visual {
+    height: 150px;
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.ecosystem-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.ecosystem-image.forest {
+    background-image: url('https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.ecosystem-image.ocean {
+    background-image: url('https://images.pexels.com/photos/2156311/pexels-photo-2156311.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.ecosystem-image.desert {
+    background-image: url('https://images.pexels.com/photos/1367192/pexels-photo-1367192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+}
+
+.ecosystem-species {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.ecosystem-species li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.ecosystem-species li::before {
+    content: '🌿';
+    position: absolute;
+    left: 0;
+}
+
+.food-chain-model {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.trophic-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.organism {
+    padding: 1rem 2rem;
+    background: var(--gradient-primary);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.energy-flow {
+    font-size: 2rem;
+    color: var(--primary-color);
+    animation: flow 2s ease-in-out infinite;
+}
+
+@keyframes flow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+
+.energy-transfer-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.cycles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.cycle-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.cycle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.cycle-diagram {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.cycle-step {
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-align: center;
+    min-width: 150px;
+}
+
+.cycle-arrow {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    animation: flow 2s ease-in-out infinite;
+}
+
+.quiz-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.quiz-question {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.quiz-question:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.quiz-option {
+    padding: 1rem;
+    border: 2px solid var(--light-text);
+    background: transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.quiz-option:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.quiz-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    background: var(--light-bg);
+}
+
+/* Resurse suplimentare pentru toate paginile */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.resource-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.resource-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.resource-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.resource-link:hover {
+    gap: 1rem;
+}
+
+/* Responsive pentru elementele specifice */
+@media (max-width: 768px) {
+    .topics-grid,
+    .formulas-grid,
+    .exercises-grid,
+    .experiments-grid,
+    .simulations-grid,
+    .reactions-grid,
+    .ecosystems-grid,
+    .cycles-grid,
+    .quiz-container,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .exercise-options,
+    .quiz-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .lab-workspace {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .periodic-table {
+        transform: scale(0.8);
+    }
+    
+    .cell-membrane {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .nucleus, .mitochondria, .endoplasmic-reticulum, .golgi-apparatus, .lysosome {
+        font-size: 0.7rem;
+        min-width: 60px;
+        padding: 0.5rem;
+    }
+} 

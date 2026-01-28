@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biologie - Notiuni Educaționale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header cu navigare -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Notiuni Educaționale</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Acasă</a></li>
+                <li><a href="matematica.html" class="nav-link">Matematică</a></li>
+                <li><a href="fizica.html" class="nav-link">Fizică</a></li>
+                <li><a href="chimia.html" class="nav-link">Chimie</a></li>
+                <li><a href="biologia.html" class="nav-link active">Biologie</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section pentru Biologie -->
+    <section class="hero biologia-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Biologie</h1>
+            <p class="hero-subtitle">Explorează viața și diversitatea organismelor vii</p>
+            <div class="hero-buttons">
+                <a href="#topics" class="btn btn-primary">Explorează Subiectele</a>
+                <a href="#ecosystems" class="btn btn-secondary">Ecosisteme</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="biology-elements">
+                <div class="biology-element">🌱</div>
+                <div class="biology-element">🦋</div>
+                <div class="biology-element">🧬</div>
+                <div class="biology-element">🌿</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Subiecte Biologie -->
+    <section id="topics" class="topics-section">
+        <div class="container">
+            <h2 class="section-title">Subiecte de Biologie</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h3>Biologie Celulară</h3>
+                    <p>Structura și funcția celulelor vii</p>
+                    <ul class="topic-list">
+                        <li>Organite celulare</li>
+                        <li>Diviziunea celulară</li>
+                        <li>Metabolismul celular</li>
+                        <li>Transportul celular</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Botanică</h3>
+                    <p>Studiul plantelor și al regnului vegetal</p>
+                    <ul class="topic-list">
+                        <li>Anatomia plantelor</li>
+                        <li>Fotosinteza</li>
+                        <li>Reproducerea plantelor</li>
+                        <li>Clasificarea plantelor</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Anatomie și Fiziologie</h3>
+                    <p>Structura și funcția organismelor</p>
+                    <ul class="topic-list">
+                        <li>Sistemul digestiv</li>
+                        <li>Sistemul circulator</li>
+                        <li>Sistemul nervos</li>
+                        <li>Sistemul respirator</li>
+                    </ul>
+                </div>
+
+                <div class="topic-card">
+                    <div class="topic-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Ecologie</h3>
+                    <p>Relațiile dintre organisme și mediu</p>
+                    <ul class="topic-list">
+                        <li>Ecosisteme</li>
+                        <li>Lanțuri trofice</li>
+                        <li>Ciclul materiilor</li>
+                        <li>Conservarea biodiversității</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Sistemul Celular Interactiv -->
+    <section class="cell-system-section">
+        <div class="container">
+            <h2 class="section-title">Sistemul Celular Interactiv</h2>
+            <div class="cell-model">
+                <div class="cell-membrane">
+                    <div class="nucleus" data-organelle="nucleus">
+                        <span>Nucleu</span>
+                    </div>
+                    <div class="mitochondria" data-organelle="mitochondria">
+                        <span>Mitocondrii</span>
+                    </div>
+                    <div class="endoplasmic-reticulum" data-organelle="er">
+                        <span>Reticul Endoplasmic</span>
+                    </div>
+                    <div class="golgi-apparatus" data-organelle="golgi">
+                        <span>Aparatul Golgi</span>
+                    </div>
+                    <div class="lysosome" data-organelle="lysosome">
+                        <span>Lizozomi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="organelle-info">
+                <h3>Informații despre Organite</h3>
+                <div class="organelle-details">
+                    <p>Click pe un organit pentru a vedea informațiile despre acesta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Ecosisteme -->
+    <section id="ecosystems" class="ecosystems-section">
+        <div class="container">
+            <h2 class="section-title">Ecosisteme și Biodiversitate</h2>
+            <div class="ecosystems-grid">
+                <div class="ecosystem-card">
+                    <div class="ecosystem-visual">
+                        <div class="ecosystem-image forest"></div>
+                    </div>
+                    <h3>Pădurea</h3>
+                    <p>Ecosistemul forestier cu diversitatea sa de plante și animale.</p>
+                    <ul class="ecosystem-species">
+                        <li>Copaci: stejar, fag, brad</li>
+                        <li>Animale: cerb, veveriță, ciocănitoare</li>
+                        <li>Fungi și licheni</li>
+                    </ul>
+                </div>
+
+                <div class="ecosystem-card">
+                    <div class="ecosystem-visual">
+                        <div class="ecosystem-image ocean"></div>
+                    </div>
+                    <h3>Oceanul</h3>
+                    <p>Ecosistemul marin cu viața subacvatică diversă.</p>
+                    <ul class="ecosystem-species">
+                        <li>Pești: ton, somn, cod</li>
+                        <li>Mamifere marine: delfini, balene</li>
+                        <li>Alge și coral</li>
+                    </ul>
+                </div>
+
+                <div class="ecosystem-card">
+                    <div class="ecosystem-visual">
+                        <div class="ecosystem-image desert"></div>
+                    </div>
+                    <h3>Deșertul</h3>
+                    <p>Ecosistem arid cu adaptări speciale la condiții extreme.</p>
+                    <ul class="ecosystem-species">
+                        <li>Plante: cactus, palmieri</li>
+                        <li>Animale: cămilă, șarpe, șopârlă</li>
+                        <li>Adaptări la secetă</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Lanțuri Trofice -->
+    <section class="food-chains-section">
+        <div class="container">
+            <h2 class="section-title">Lanțuri Trofice Interactive</h2>
+            <div class="food-chain-model">
+                <div class="trophic-level producer">
+                    <div class="organism plant">🌱 Plantă</div>
+                    <div class="energy-flow">↓</div>
+                </div>
+                <div class="trophic-level herbivore">
+                    <div class="organism rabbit">🐰 Iepure</div>
+                    <div class="energy-flow">↓</div>
+                </div>
+                <div class="trophic-level carnivore">
+                    <div class="organism fox">🦊 Vulpe</div>
+                    <div class="energy-flow">↓</div>
+                </div>
+                <div class="trophic-level decomposer">
+                    <div class="organism fungi">🍄 Fungi</div>
+                </div>
+            </div>
+            <div class="energy-transfer-info">
+                <h3>Transferul de Energie</h3>
+                <p>La fiecare nivel trofic se pierde aproximativ 90% din energie, doar 10% fiind transferată la nivelul următor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Cicluri Biogeochimice -->
+    <section class="biogeochemical-cycles-section">
+        <div class="container">
+            <h2 class="section-title">Cicluri Biogeochimice</h2>
+            <div class="cycles-grid">
+                <div class="cycle-card">
+                    <h3>Ciclul Carbonului</h3>
+                    <div class="cycle-diagram carbon-cycle">
+                        <div class="cycle-step">Atmosferă (CO₂)</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Fotosinteză</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Plante</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Respirație</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Atmosferă (CO₂)</div>
+                    </div>
+                </div>
+
+                <div class="cycle-card">
+                    <h3>Ciclul Apei</h3>
+                    <div class="cycle-diagram water-cycle">
+                        <div class="cycle-step">Evaporare</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Condensare</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Precipitații</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Infiltratie</div>
+                        <div class="cycle-arrow">↓</div>
+                        <div class="cycle-step">Evaporare</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Teste Interactive -->
+    <section class="biology-quiz-section">
+        <div class="container">
+            <h2 class="section-title">Teste Interactive</h2>
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <h3>Întrebarea 1:</h3>
+                    <p>Care organit celular este responsabil pentru producerea energiei?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="true">Mitocondrii</button>
+                        <button class="quiz-option" data-correct="false">Nucleu</button>
+                        <button class="quiz-option" data-correct="false">Reticul Endoplasmic</button>
+                        <button class="quiz-option" data-correct="false">Aparatul Golgi</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h3>Întrebarea 2:</h3>
+                    <p>Care proces permite plantelor să producă propriul lor aliment?</p>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-correct="false">Respirația</button>
+                        <button class="quiz-option" data-correct="true">Fotosinteza</button>
+                        <button class="quiz-option" data-correct="false">Digestia</button>
+                        <button class="quiz-option" data-correct="false">Excreția</button>
+                    </div>
+                    <div class="quiz-feedback"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secțiunea Resurse Suplimentare -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 class="section-title">Resurse Suplimentare</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Microscopie Virtuală</h3>
+                    <p>Explorează celule și țesuturi prin microscopul virtual.</p>
+                    <a href="#" class="resource-link">Accesează Microscopul</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Arborele Filogenetic</h3>
+                    <p>Explorează evoluția și relațiile dintre specii.</p>
+                    <a href="#" class="resource-link">Vezi Arborele</a>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h3>Hărți de Biodiversitate</h3>
+                    <p>Descoperă distribuția speciilor pe glob.</p>
+                    <a href="#" class="resource-link">Explorează Hărțile</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Notiuni Educaționale</h3>
+                    <p>Platforma ta pentru învățare modernă și interactivă.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Subiecte</h4>
+                    <ul>
+                        <li><a href="matematica.html">Matematică</a></li>
+                        <li><a href="fizica.html">Fizică</a></li>
+                        <li><a href="chimia.html">Chimie</a></li>
+                        <li><a href="biologia.html">Biologie</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resurse</h4>
+                    <ul>
+                        <li><a href="#">Exerciții</a></li>
+                        <li><a href="#">Video-uri</a></li>
+                        <li><a href="#">Teste</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@notiuni.ro</li>
+                        <li><i class="fas fa-phone"></i> +40 123 456 789</li>
+                        <li><i class="fas fa-map-marker-alt"></i> București, România</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Notiuni Educaționale. Toate drepturile rezervate.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
